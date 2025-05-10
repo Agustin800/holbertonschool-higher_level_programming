@@ -5,3 +5,5 @@ def uppercase(str):
             mayus = chr(ord(letra) - 32)
         else:
             mayus = letra
+        print(mayus, end="")
+    print()
