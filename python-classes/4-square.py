@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Cuadra2
+Cuadra2 ** 2
 """
 
 
