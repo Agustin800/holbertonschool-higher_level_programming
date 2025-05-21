@@ -5,7 +5,7 @@ representa un cuadrado con un tamaño dado.
 """
 
 
-class  Square:
+class Square:
     """
     Clase que define un cuadrado con un atributo privado de tamaño.
     """
