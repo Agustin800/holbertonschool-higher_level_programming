@@ -30,7 +30,7 @@ class Square:
     def position(self):
         """Getter: devuelve el valor de __position"""
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """Setter: valida y asigna __position"""
