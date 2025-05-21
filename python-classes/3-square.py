@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-
+Retorna el area del cuadrado
 """
 
 
