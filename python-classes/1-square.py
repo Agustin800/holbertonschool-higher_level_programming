@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Este módulo define la clase Square que - 
+Este módulo define la clase Square que -
 representa un cuadrado con un tamaño dado.
 """
 
