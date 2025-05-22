@@ -52,3 +52,7 @@ class Rectangle:
             return ""
         lines = ["#" * self.__width for _ in range(self.__height)]
         return "\n".join(lines)
+
+    def __repr__(self):
+        '''Imprime la representacion en forma de srting'''
+        return f"Rectangle({self.__width}, {self.__height})"
