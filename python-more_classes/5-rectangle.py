@@ -56,3 +56,7 @@ class Rectangle:
     def __repr__(self):
         '''Imprime la representacion en forma de srting'''
         return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        '''Imprime Bye rectangle..., cuando se elimina una instancia'''
+        print("Bye rectangle...")
