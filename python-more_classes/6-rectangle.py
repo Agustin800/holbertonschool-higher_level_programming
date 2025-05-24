@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+'''Clase de un rectangulo'''
+
+
 class Rectangle:
     '''atributo publico'''
     number_of_instances = 0
