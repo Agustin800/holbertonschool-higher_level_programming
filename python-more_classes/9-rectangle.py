@@ -14,6 +14,10 @@ class Rectangle:
         self.width = width
         Rectangle.number_of_instances += 1
 
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
+
     @property
     def width(self):
         """Getter: devuelve el valor de __width"""
@@ -81,7 +85,3 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        return cls(size, size)
