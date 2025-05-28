@@ -2,7 +2,7 @@
 '''Clase MyList que hereda de list'''
 
 
-class Mylist(list):
+class MyList(list):
     '''Subclase de list con un método para imprimir ordenado'''
 
     def print_sorted(self):
