@@ -4,7 +4,6 @@
 Traceback (most recent call last):
     ...
 Exception: area() is not implemented
->>> bg.integer_validator()
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 >>> try:
@@ -22,3 +21,8 @@ Exception: area() is not implemented
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [ValueError] distance must be greater than 0
+>>> try:
+...     bg.integer_validator()
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
