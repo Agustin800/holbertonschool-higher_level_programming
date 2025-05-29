@@ -1,4 +1,4 @@
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> BaseGeometry = __import__('base_geometry_7_2').BaseGeometry
 >>> bg = BaseGeometry()
 >>> bg.area()
 Traceback (most recent call last):
@@ -26,3 +26,20 @@ Exception: area() is not implemented
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [TypeError] empty must be an integer
+>>> try:
+...     bg.integer_validator("float_num", 5.5)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] float_num must be an integer
+>>> try:
+...     bg.integer_validator("list_val", [1, 2, 3])
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] list_val must be an integer
+>>> try:
+...     bg.integer_validator("zero", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] zero must be greater than 0
+>>> bg.integer_validator("one", 1)
+>>> bg.integer_validator("large", 999999)
