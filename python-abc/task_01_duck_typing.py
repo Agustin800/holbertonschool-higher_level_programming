@@ -1,0 +1,41 @@
+#!/usr/bin/python3
+'''Modulo'''
+from abc import ABC, abstractmethod
+import math
+
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * self.radius ** 2
+
+    def perimeter(self):
+        return 2 * math.pi * self.radius
+
+class Rectangle(Shape):
+    '''clase rectangulo'''
+    def __init__(self, width=0, height=0):
+        self.height = height
+        self.width = width
+
+    def area(self):
+        return self.width * self.height
+
+    def perimeter(self):
+        if self.height == 0 or self.width == 0:
+            return 0
+        return (self.width * 2) + (self.height * 2)
+
+def shape_info(shape):
+    print("Area:", shape.area())
+    print("Perimeter", shape.perimeter())
