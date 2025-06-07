@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Modulo'''
+'''Script que agrega argumentos a una lista y los guarda en un archivo JSON.'''
 import sys
 
 
@@ -9,10 +9,10 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 file = "add_item.json"
 
 try:
-    list = load_from_json_file(file)
+    item = load_from_json_file(file)
 except FileNotFoundError:
-    list = []
+    item = []
 
-list.extend(sys.argv[1:])
+item.extend(sys.argv[1:])
 
-save_to_json_file(list, file)
+save_to_json_file(item, file)
