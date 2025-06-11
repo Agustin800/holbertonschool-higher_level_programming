@@ -16,4 +16,15 @@ def fetch_and_print_posts():
             print(post['title'])
 
 def fetch_and_save_posts():
-    pass
+    url = 'https://jsonplaceholder.typicode.com/posts'
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        posts = response.json()
+        post_data = [{'id': posts['id'], 'title': posts['title'], 'body': posts['body']} for post in posts]
+
+    with open('posts.csv', mode='w', newline='', encoding='utf-8') as file:
+        fildnames = ['id', 'titles', 'body']
+        writer = csv.DictWriter(file, fildnames=fildnames)
+        writer.writeheader()
+        writer.writerows(post_data)
