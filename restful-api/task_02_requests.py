@@ -23,8 +23,8 @@ def fetch_and_save_posts():
         posts = response.json()
         post_data = [{'id': post['id'], 'title': post['title'], 'body': post['body']} for post in posts]
 
-    with open('posts.csv', mode='w', newline='', encoding='utf-8') as file:
-        fieldname = ['id', 'title', 'body']
-        writer = csv.DictWriter(file, fieldnames=fieldname)
-        writer.writeheader()
-        writer.writerows(post_data)
+        with open('posts.csv', mode='w', newline='', encoding='utf-8') as file:
+              fieldname = ['id', 'title', 'body']
+              writer = csv.DictWriter(file, fieldnames=fieldname)
+              writer.writeheader()
+              writer.writerows(post_data)
