@@ -9,6 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 # Instancia de la base para las clases declarativas
 Base = declarative_base()
 
+
 class State(Base):
     """Clase que representa la tabla 'states' en la base de datos"""
     __tablename__ = 'states'
