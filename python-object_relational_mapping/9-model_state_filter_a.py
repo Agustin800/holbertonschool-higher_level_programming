@@ -25,7 +25,6 @@ if __name__ == "__main__":
         .all()
     )
 
-
     for state in states_with_a:
         print(f"{state.id}: {state.name}")
 
