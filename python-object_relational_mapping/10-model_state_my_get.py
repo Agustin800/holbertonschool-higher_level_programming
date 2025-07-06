@@ -24,11 +24,10 @@ if __name__ == "__main__":
     state_name = sys.argv[4]
 
     engine = create_engine(
-    f'mysql+mysqldb://{mysql_username}:{mysql_password}'
-    f'@localhost/{database_name}',
-    pool_pre_ping=True
-)
-
+        f'mysql+mysqldb://{mysql_username}:{mysql_password}'
+        f'@localhost/{database_name}',
+        pool_pre_ping=True
+    )
 
     Session = sessionmaker(bind=engine)
     session = Session()
