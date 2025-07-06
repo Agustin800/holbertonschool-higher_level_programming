@@ -12,7 +12,8 @@ if __name__ == "__main__":
 
     if len(sys.argv) != 4:
         print(
-            "Usage: ./script.py <mysql username> <mysql password> <database name>"
+            "Usage: ./script.py <mysql username> "
+            "<mysql password> <database name>"
         )
         sys.exit(1)
 
