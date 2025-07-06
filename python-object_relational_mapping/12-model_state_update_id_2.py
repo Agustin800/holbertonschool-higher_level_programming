@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     engine = create_engine(
         f'mysql+mysqldb://{mysql_username}:{mysql_password}'
-        '@localhost/{database_name}',
+        f'@localhost/{database_name}',
         pool_pre_ping=True
     )
 
