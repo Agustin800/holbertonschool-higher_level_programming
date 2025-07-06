@@ -3,9 +3,6 @@
 import MySQLdb
 import sys
 
-import MySQLdb
-import sys
-
 if __name__ == "__main__":
     mysql_user = sys.argv[1]
     mysql_pass = sys.argv[2]
