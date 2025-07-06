@@ -33,7 +33,6 @@ if __name__ == "__main__":
         .all()
     )
 
-
     for state in states_to_delete:
         session.delete(state)
 
