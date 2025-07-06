@@ -11,7 +11,11 @@ from model_state import Base, State
 if __name__ == "__main__":
 
     if len(sys.argv) != 5:
-        print("Usage: ./script.py <mysql username> <mysql password> <database name> <state name to search>")
+        print(
+            "Usage: ./script.py <mysql username> <mysql password> "
+            "<database name> <state name to search>"
+        )
+
         sys.exit(1)
 
     mysql_username = sys.argv[1]
@@ -20,9 +24,11 @@ if __name__ == "__main__":
     state_name = sys.argv[4]
 
     engine = create_engine(
-        f'mysql+mysqldb://{mysql_username}:{mysql_password}@localhost/{database_name}',
-        pool_pre_ping=True
-    )
+    f'mysql+mysqldb://{mysql_username}:{mysql_password}'
+    f'@localhost/{database_name}',
+    pool_pre_ping=True
+)
+
 
     Session = sessionmaker(bind=engine)
     session = Session()
